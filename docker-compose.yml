@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  tseek_db_psql:
+    image: postgres
+    container_name: tseek_db_psql
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=adminsecret
+      - POSTGRES_DB=tseek_db
+    ports:
+      - 5432:5432
+    volumes:
+      - ./files:/file
+      - ./var/lib/postgresql/data:/var/lib/postgresql/data
