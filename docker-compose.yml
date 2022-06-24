@@ -11,5 +11,5 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./files:/file
+      - ./files:/files
       - ./var/lib/postgresql/data:/var/lib/postgresql/data
